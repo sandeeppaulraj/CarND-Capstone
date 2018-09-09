@@ -231,6 +231,7 @@ bool PurePursuit::interpolateNextTarget(int next_waypoint, geometry_msgs::Point 
 
 bool PurePursuit::verifyFollowing() const
 {
+#if 0
   double a = 0;
   double b = 0;
   double c = 0;
@@ -248,6 +249,8 @@ bool PurePursuit::verifyFollowing() const
     // ROS_INFO("Following : False");
     return false;
   }
+#endif
+  return false;
 }
 geometry_msgs::Twist PurePursuit::calcTwist(double curvature, double cmd_velocity) const
 {
